@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Komik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-gray-900 text-white py-4 shadow">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Kom<span class="text-indigo-600">Len</span></h1>
+      <a href="#" class="text-gray-300 hover:text-white">Kembali</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Cover -->
+      <div>
+        <img src="https://placehold.co/500x700?text=Cover" class="w-full rounded-xl shadow" />
+      </div>
+
+      <!-- Info -->
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-bold mb-2">Judul Komik</h2>
+        <p class="text-sm text-gray-600 mb-4">Genre • Pengarang • Tahun</p>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Deskripsi singkat komik ini. Ceritakan premis, tokoh utama, atau latar dunia.
+          Bisa lebih panjang untuk menjelaskan isi komik.
+        </p>
+
+        <button class="bg-gray-900 text-white px-5 py-2 rounded-lg shadow hover:bg-black">
+          Mulai Baca
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Daftar Chapter -->
+    <section class="mt-12">
+      <h3 class="text-xl font-semibold mb-4">Daftar Chapter</h3>
+
+      <div class="bg-white rounded-xl shadow divide-y">
+        <!-- Chapter Item -->
+        <a href="#" class="flex justify-between items-center px-4 py-3 hover:bg-gray-50">
+          <span>Chapter 1: Judul Chapter</span>
+          <span class="text-gray-500 text-sm">12 halaman</span>
+        </a>
+
+        <a href="#" class="flex justify-between items-center px-4 py-3 hover:bg-gray-50">
+          <span>Chapter 2: Judul Chapter</span>
+          <span class="text-gray-500 text-sm">15 halaman</span>
+        </a>
+
+        <a href="#" class="flex justify-between items-center px-4 py-3 hover:bg-gray-50">
+          <span>Chapter 3: Judul Chapter</span>
+          <span class="text-gray-500 text-sm">18 halaman</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

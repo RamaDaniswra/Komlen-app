@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: #f4f4f4;
+            padding: 40px;
+            border-radius: 14px;
+            width: 380px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        label {
+            font-size: 14px;
+            color: #444;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            background: #fafafa;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #6e6e6e;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #5a5a5a;
+        }
+        .login-link {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        .login-link a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Register</h2>
+
+        <label>Username</label>
+        <input type="text" placeholder="Masukkan nama" />
+
+        <label>Email</label>
+        <input type="text" placeholder="Masukkan username" />
+
+        <label>Password</label>
+        <input type="password" placeholder="Masukkan password" />
+
+        <label>Konfirmasi Password</label>
+        <input type="password" placeholder="Ulangi password" />
+
+        <button class="w-full py-2.5 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition">Daftar</button>
+
+        <div class="login-link">
+            Sudah punya akun? <a href="#">Login</a>
+        </div>
+    </div>
+</body>
+</html>

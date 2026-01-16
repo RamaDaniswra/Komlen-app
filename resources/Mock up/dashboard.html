@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Koperasi Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar agar lebih rapi */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <aside id="sidebar" class="bg-gray-900 text-gray-300 w-64 flex-shrink-0 hidden md:flex flex-col transition-all duration-300 h-full">
+            <div class="h-16 flex items-center justify-center border-b border-gray-800 bg-gray-950">
+                <div class="flex items-center gap-2 font-bold text-white text-xl">
+                    <i class="ph-fill ph-bank text-gray-400 text-2xl"></i>
+                    <span>Koperasi<span class="text-gray-500">Kita</span></span>
+                </div>
+            </div>
+
+            <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+                <a href="#" class="flex items-center gap-3 px-4 py-3 bg-gray-800 text-white rounded-lg transition-colors shadow-sm">
+                    <i class="ph ph-squares-four text-xl"></i>
+                    <span class="font-medium">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 hover:text-white rounded-lg transition-colors">
+                    <i class="ph ph-users text-xl"></i>
+                    <span>Anggota</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 hover:text-white rounded-lg transition-colors">
+                    <i class="ph ph-piggy-bank text-xl"></i>
+                    <span>Simpanan</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 hover:text-white rounded-lg transition-colors">
+                    <i class="ph ph-hand-coins text-xl"></i>
+                    <span>Pinjaman</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 hover:text-white rounded-lg transition-colors">
+                    <i class="ph ph-package text-xl"></i>
+                    <span>Produk</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 hover:text-white rounded-lg transition-colors">
+                    <i class="ph ph-arrows-left-right text-xl"></i>
+                    <span>Transaksi</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-800 hover:text-white rounded-lg transition-colors">
+                    <i class="ph ph-file-text text-xl"></i>
+                    <span>Laporan</span>
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-gray-800 text-xs text-gray-500 text-center">
+                &copy; 2024 Koperasi Digital
+            </div>
+        </aside>
+
+        <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+
+            <header class="bg-white shadow-sm z-10 h-16 flex items-center justify-between px-6">
+                <button id="mobile-menu-btn" class="md:hidden text-gray-500 hover:text-gray-800 focus:outline-none">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+
+                <h2 class="text-lg font-semibold text-gray-700 hidden md:block">Overview Dashboard</h2>
+
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2">
+                        <div class="text-right hidden sm:block">
+                            <p class="text-sm font-semibold text-gray-800">Admin Utama</p>
+                            <p class="text-xs text-gray-500">Administrator</p>
+                        </div>
+                        <div class="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-600">
+                            <i class="ph-fill ph-user text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="h-8 w-px bg-gray-200 mx-1"></div>
+                    <button class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-red-600 bg-red-50 hover:bg-red-100 rounded-md transition-colors">
+                        <i class="ph ph-sign-out text-lg"></i>
+                        <span class="hidden sm:inline">Logout</span>
+                    </button>
+                </div>
+            </header>
+
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 flex items-center justify-between hover:shadow-md transition-shadow">
+                        <div>
+                            <p class="text-sm font-medium text-gray-500 uppercase tracking-wide">Jumlah Anggota</p>
+                            <p class="text-3xl font-bold text-gray-800 mt-1">1,245</p>
+                            <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded mt-2 inline-block font-medium">
+                                <i class="ph-bold ph-arrow-up-right"></i> +12% bulan ini
+                            </span>
+                        </div>
+                        <div class="h-14 w-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600">
+                            <i class="ph-fill ph-users-three text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 flex items-center justify-between hover:shadow-md transition-shadow">
+                        <div>
+                            <p class="text-sm font-medium text-gray-500 uppercase tracking-wide">Total Simpanan</p>
+                            <p class="text-3xl font-bold text-gray-800 mt-1">Rp 850 Jt</p>
+                            <p class="text-xs text-gray-400 mt-2">Akumulasi simpanan wajib & pokok</p>
+                        </div>
+                        <div class="h-14 w-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600">
+                            <i class="ph-fill ph-wallet text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 flex items-center justify-between hover:shadow-md transition-shadow">
+                        <div>
+                            <p class="text-sm font-medium text-gray-500 uppercase tracking-wide">Total Pinjaman</p>
+                            <p class="text-3xl font-bold text-gray-800 mt-1">Rp 320 Jt</p>
+                            <p class="text-xs text-gray-400 mt-2">Pinjaman aktif beredar</p>
+                        </div>
+                        <div class="h-14 w-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600">
+                            <i class="ph-fill ph-hand-coins text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="px-6 py-5 border-b border-gray-200 flex justify-between items-center">
+                        <h3 class="text-lg font-bold text-gray-800">Transaksi Terbaru</h3>
+                        <button class="text-sm text-gray-600 hover:text-gray-900 font-medium flex items-center gap-1">
+                            Lihat Semua <i class="ph ph-caret-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-gray-200 text-gray-700 text-xs uppercase tracking-wider">
+                                    <th class="px-6 py-4 font-semibold">ID Transaksi</th>
+                                    <th class="px-6 py-4 font-semibold">Anggota</th>
+                                    <th class="px-6 py-4 font-semibold">Jenis</th>
+                                    <th class="px-6 py-4 font-semibold">Tanggal</th>
+                                    <th class="px-6 py-4 font-semibold">Nominal</th>
+                                    <th class="px-6 py-4 font-semibold text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">#TRX-001</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Budi Santoso</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Simpanan Wajib</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">17 Nov 2024</td>
+                                    <td class="px-6 py-4 text-sm font-semibold text-gray-800">Rp 50.000</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 text-xs font-medium text-green-700 bg-green-100 rounded-full">Berhasil</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">#TRX-002</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Siti Aminah</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Angsuran Pinjaman</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">17 Nov 2024</td>
+                                    <td class="px-6 py-4 text-sm font-semibold text-gray-800">Rp 250.000</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 text-xs font-medium text-green-700 bg-green-100 rounded-full">Berhasil</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">#TRX-003</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Ahmad Fauzi</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Pengajuan Pinjaman</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">16 Nov 2024</td>
+                                    <td class="px-6 py-4 text-sm font-semibold text-gray-800">Rp 5.000.000</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 text-xs font-medium text-yellow-700 bg-yellow-100 rounded-full">Pending</span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="px-6 py-4 text-sm font-medium text-gray-900">#TRX-004</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Dewi Lestari</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">Pembelian Produk</td>
+                                    <td class="px-6 py-4 text-sm text-gray-600">16 Nov 2024</td>
+                                    <td class="px-6 py-4 text-sm font-semibold text-gray-800">Rp 120.000</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span class="px-3 py-1 text-xs font-medium text-gray-700 bg-gray-200 rounded-full">Proses</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <footer class="mt-8 text-center sm:text-left text-sm text-gray-500 pb-4">
+                    <p>Sistem Informasi Koperasi Versi 2.0</p>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        btn.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('absolute');
+            sidebar.classList.toggle('z-50');
+            sidebar.classList.toggle('h-full');
+        });
+    </script>
+</body>
+</html>

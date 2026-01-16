@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baca Komik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-gray-900 text-white py-4 shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+     <h1 class="text-2xl font-bold">Kom<span class="text-indigo-600">Len</span></h1>
+      <a href="#" class="text-gray-300 hover:text-white">Kembali</a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto py-8 px-4">
+    <div class="space-y-6">
+      <!-- Placeholder halaman komik -->
+      <img src="https://placehold.co/800x1200?text=Halaman+1" class="w-full rounded-lg shadow" />
+      <img src="https://placehold.co/800x1200?text=Halaman+2" class="w-full rounded-lg shadow" />
+      <img src="https://placehold.co/800x1200?text=Halaman+3" class="w-full rounded-lg shadow" />
+      <img src="https://placehold.co/800x1200?text=Halaman+4" class="w-full rounded-lg shadow" />
+    </div>
+
+    <div class="flex justify-center mt-8 space-x-4">
+      <button class="bg-gray-900 text-white px-5 py-2 rounded-lg hover:bg-black">Sebelumnya</button>
+      <button class="bg-gray-900 text-white px-5 py-2 rounded-lg hover:bg-black">Berikutnya</button>
+    </div>
+      <!-- Form komentar (hanya tampil jika user login) -->
+  <div class="mt-4">
+    <form class="space-y-2">
+      <textarea placeholder="Tulis komentar..." class="w-full px-3 py-2 border rounded"></textarea>
+      <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-black">Kirim</button>
+    </form>
+    <section class="mt-8">
+  <h3 class="text-xl font-bold mb-4">Komentar</h3>
+  
+  <!-- Daftar komentar -->
+  <div class="space-y-4">
+    <div class="bg-gray-100 p-3 rounded">
+      <p class="text-sm text-gray-600">Budi: Komiknya seru banget!</p>
+    </div>
+    <div class="bg-gray-100 p-3 rounded">
+      <p class="text-sm text-gray-600">Siti: Chapter ini terlalu pendek 😅</p>
+    </div>
+  </div>
+  </div>
+</section>
+  </main>
+</body>
+</html>

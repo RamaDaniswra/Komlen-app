@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simpanan - Koperasi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+        .sidebar {
+            width: 230px;
+            background: #e0e0e0;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            margin: 0 0 20px;
+            font-weight: 700;
+        }
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .sidebar a:hover, .sidebar .active {
+            background: #c9c9c9;
+        }
+        .container {
+            margin-left: 230px;
+            padding: 20px;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar .admin {
+            font-weight: bold;
+            color: #555;
+        }
+        .content-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table th, table td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background: #e7e7e7;
+        }
+        .btn {
+            background: #b5b5b5;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #9d9d9d;
+        }
+        .actions a {
+            margin-right: 5px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Koperasi</h2>
+        <a href="#">Dashboard</a>
+        <a href="#">Anggota</a>
+        <a href="#" class="active">Simpanan</a>
+        <a href="#">Pinjaman</a>
+        <a href="#">Produk</a>
+        <a href="#">Transaksi</a>
+        <a href="#">Laporan</a>
+        <hr>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="container">
+        <div class="top-bar">
+            <h1>Simpanan</h1>
+            <div class="admin">Admin: Aditya</div>
+        </div>
+
+        <div class="content-box">
+            <a href="#" class="btn">+ Tambah Simpanan</a>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Anggota</th>
+                        <th>Jenis Simpanan</th>
+                        <th>Jumlah</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Rina Putri</td>
+                        <td>Simpanan Pokok</td>
+                        <td>Rp 100.000</td>
+                        <td>12-01-2025</td>
+                        <td class="actions">
+                            <a href="#" class="btn">Edit</a>
+                            <a href="#" class="btn">Hapus</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Budi Santoso</td>
+                        <td>Simpanan Wajib</td>
+                        <td>Rp 50.000</td>
+                        <td>15-01-2025</td>
+                        <td class="actions">
+                            <a href="#" class="btn">Edit</a>
+                            <a href="#" class="btn">Hapus</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
