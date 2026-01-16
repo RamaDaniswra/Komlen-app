@@ -1,11 +1,11 @@
 Cara Install:
 
-Clone repository ini.
+1.Clone repository ini.
 
-Jalankan composer install.
+2.Jalankan composer install.
 
-Copy .env.example menjadi .env.
+3.Copy .env.example menjadi .env.
 
-Buat database di phpMyAdmin dan Import file database/database.sql.
+4.Buat database di phpMyAdmin dan Import file database/database.sql.
 
-Jalankan php artisan serve.
+5.Jalankan php artisan serve.
